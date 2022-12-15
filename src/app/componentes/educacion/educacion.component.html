@@ -1,0 +1,82 @@
+<div class="row" id="experiencia">
+    <h1>Educacion</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">Nueva Educación</button>
+    </div>
+
+    <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Educacion of educacion">
+                        <td><h2>{{Educacion.nombreE}}</h2></td>
+                        <td>{{Educacion.descripcionE}}</td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}"><i class="bi bi-pencil"></i>Editar</button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Educacion.id)"><i class="bi bi-trash"></i>Borrar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="row" id="educacion">
+    <h1>Educación</h1>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-11">
+        <ul>
+            <li>
+                <h3>Administrador de Base de Datos Oracle 10g. (Fundación Proydesa)</h3> - <h4>2009</h4>
+            </li>
+            <li>
+                <h3>Genexus (Instituto Superior Jujuy Digital)</h3> - <h4>2008</h4>
+            </li>
+            <li>
+                <h3>Reparador de PC Avanzado (Instituto Superior Jujuy Digital)</h3> - <h4>2008</h4>
+            </li>
+            <li>
+                <h3>Instalación y configuración de discos rígidos (Instituto Superior Jujuy)</h3> - <h4>2005</h4>
+            </li>
+            <li>
+                <h3>Seminario de e-learning, informática y diseño gráfico. (Inst. Superior Jujuy Digital)</h3> - <h4>2008</h4>
+            </li>
+            <li>
+                <h3>Lenguaje HTML – Diseño de Sitios WEB (Primera parte). (Instituto Superior Jujuy)</h3> - <h4>2006</h4>
+            </li>
+            <li>
+                <h3>Tecnología, Innovación y Derechos Intelectuales. (Escuela de Gobierno)</h3> - <h4>2009</h4>
+            </li>
+            <li>
+                <h3>Gestión de Expedientes. (IPAP)</h3> - <h4>2012</h4>
+            </li>
+            <li>
+                <h3>Redacción de documentos administrativos. (IPAP)</h3> - <h4>2012</h4>
+            </li>
+            <li>
+                <h3>Photoshop. (IPAP)</h3> - <h4>2012</h4>
+            </li>
+            <li>
+                <h3>Argentina Programa: #SeProgramar (Argentina Programa)</h3> - <h4>2022</h4>
+            </li>
+        </ul>
+
+    </div>
+
+</div>-->

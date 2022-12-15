@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="container">
+        <div class="logo">
+            <img src="../../../assets/APLogo.png" id="logoAp">
+        </div>
+        <div class="redes">
+            <a title="Perfil de Facebook" target="_blank" href="https://www.facebook.com/eduardoruben.lazarte"><img src="../../../assets/facebook4.png" id="facebook"></a>
+            <a title="Enviar un Whatsapp" target="_blank" href="https://api.whatsapp.com/send?phone=5493885010974"><img src="../../../assets/watsap2.png" id="watsap"></a>
+            <a title="Perfil de Linkedin" target="_blank" href="https://www.linkedin.com/in/eduardo-lazarte-38b8347a/"><img src="../../../assets/linkedin3.png" id="linkedin"></a>
+            <a title="Iniciar Sesión" href="/login" (click)="login()" *ngIf="!isLogged"><img src="../../../assets/login.png" id="login"></a>
+            <a title="Cerrar Sesión" href="" (click)="onLogOut()" *ngIf="isLogged"><img src="../../../assets/login2.png" id="onLogOut"></a>
+            
+            <!--<button type="button" class="btn btn-outline-success" (click)="login()" *ngIf="!isLogged">Iniciar Sesión</button>-->
+            <!--<button type="button" class="btn btn-outline-success" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>-->
+        </div>
+    </div>
+</div>
+

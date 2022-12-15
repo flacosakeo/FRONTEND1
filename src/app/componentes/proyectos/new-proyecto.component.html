@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <form   #f="ngForm" novalidate>
+            <div class="for-group">
+                <label for="nombre">Descripción</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" name="descripcion" required>
+            </div>
+            <div class="for-group">
+                <label for="img">Imagen</label>
+                <input type="file" class="form-control" id="img" name="img" [(ngModel)]="img" name="img" accept=".jpg, .png, .jpeg">
+            </div>
+            
+            
+            <br>
+            <button type="submit" class="btn btn-primary" (click)="onCreate()">Crear</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="row" id="experiencia">
+    <h1>Experiencia Laboral</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">Nueva Experiencia</button>
+    </div>
+
+    <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Experiencia of expe">
+                        <td><h2>{{Experiencia.nombreE}}</h2></td>
+                        <td>{{Experiencia.descripcionE}}</td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}"><i class="bi bi-pencil"></i>Editar</button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Experiencia.id)"><i class="bi bi-trash"></i>Borrar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!--<div class="col-lg-1"></div>
+    <div class="col-lg-11">
+        <ul>
+            <li>
+                <h3>Bramed S.R.L.</h3> - <h4>2021-2022</h4><img src="../../../assets/bramed.jfif" alt="*" id="logo">
+                <p>administrativo-facturación auditoria de prestaciones médicas.</p>
+                <p>Auditoria de prestaciones médicas, manejo de nomenclador nacional, NBU.</p><hr>
+            </li>
+            <li>
+                <h3>Clinica Mayo S.A.</h3> - <h4>2017-2021</h4><img src="../../../assets/clinica_mayo.jpg" alt="*" id="logo">
+                <p>Facturación de prestaciones.</p>
+                <p>Facturación Sanatorial. Manejo de nomenclador nacional, NBU, facturas.</p><hr>
+            </li>
+            <li>
+                <h3>Inmobiliaria Remax NOA II</h3> - <h4>2017</h4><img src="../../../assets/remax.jfif" alt="*" id="logo">
+                <p>Administrativo.</p>
+                <p>Secretario de agente Top Producer Jorge Villar.</p><hr>
+            </li>
+            <li>
+                <h3>Colegio Médico de Jujuy</h3> - <h4>2015-2016</h4><img src="../../../assets/colegio-medico.jpg" alt="*" id="logo">
+                <p>Reemplazo Administrativo Facturación.</p>
+                <p>Facturación de prestaciones medicas: consultas y prácticas.</p><hr>
+            </li>
+            <li>
+                <h3>Correo Argentino S.A.</h3> - <h4>2012-2013</h4><img src="../../../assets/correo.jpg" alt="*" id="logo">
+                <p>Eventual Administrativo..</p>
+                <p>Diversas tareas administrativas.</p><hr>
+            </li>
+            <li >
+                <h3>Hospital Materno Infantil</h3> - <h4>2011-2013</h4><img src="../../../assets/logo_hospital.png" alt="*" id="logo">
+                <p>Reemplazo en Recursos Humanos como Administrativo.</p>
+                <p>Gestión de Expediente Documental y de Pago de todo el personal reemplazante del hospital.</p><hr>
+                
+            </li>
+        </ul>
+
+    </div>-->
+    
+</div>

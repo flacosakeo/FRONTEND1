@@ -1,0 +1,29 @@
+.row{
+    padding: 20px;
+    
+}
+
+.descripcion{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    background-color:rgb(255, 195, 207);
+    text-align: justify;
+    
+}
+
+#mifoto{
+    box-shadow: 10px 10px 10px gray;  
+}
+
+#editar{
+    float:right;
+    margin-right: 15%;
+    right: 10%;
+    width:15px; 
+    height:15px;
+}
+
