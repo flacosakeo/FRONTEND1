@@ -13,6 +13,7 @@ export class NewProyectoComponent implements OnInit {
 
   descripcion:string='';
   img:string='';
+  nombre:string="";
   proyecto: Proyecto = null;
   constructor(public imageService: ImageService,private activatedRouter:ActivatedRoute, private sProyecto:ProyectoService, private router:Router) { }
 
@@ -20,10 +21,17 @@ export class NewProyectoComponent implements OnInit {
   }
 
   onCreate(): void{
+    this.img=this.imageService.urlImg
     const proy = new Proyecto(this.descripcion, this.img);
-    this.sProyecto.save(proy).subscribe((response)=>{alert("Proyecto añadido");
+    this.sProyecto.save(proy).subscribe(data=>{alert("Proyecto añadido");
     this.router.navigate(['']);},err=>{alert("Falló");
     this.router.navigate([''])})   
+  }
+
+  uploadImage($event: any) {
+    //const id = this.activatedRoute.snapshot.params['id'];   (ESTA LINEA SE ELIMINA)
+    const name = "proyecto_" + this.nombre; 
+    this.imageService.uploadImage($event, name);
   }
 
 

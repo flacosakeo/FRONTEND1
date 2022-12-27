@@ -7,6 +7,8 @@ import { Storage, ref, uploadBytes, list, getDownloadURL } from '@angular/fire/s
 export class ImageService {
 
   url: string = "";
+  urlImg: string = "";
+  nombre: string="";
 
   constructor(private storage: Storage) { }
 
@@ -25,6 +27,10 @@ export class ImageService {
       for (let item of response.items){
         this.url=await getDownloadURL(item);
         console.log("la url es: "+this.url);
+
+        if(this.nombre == item.name){
+          this.urlImg = this.url;
+        }
         
       }
     })
