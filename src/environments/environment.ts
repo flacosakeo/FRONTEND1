@@ -15,8 +15,8 @@ export const environment = {
   },
   production: false,
 
-  URL:'http://localhost:8080/'
-  //URL:'https://heroku-backendERL.herokuapp.com/'
+  //URL:'http://localhost:8080/'
+  //URL:'https://backend-1uvh.onrender.com/'
 };
 
 /*

@@ -9,7 +9,7 @@ import { Proyecto } from '../model/proyecto';
 })
 export class ProyectoService {
 
-  URL = environment.URL+'proyecto/';
+  URL = 'https://backend-1uvh.onrender.com/'+'proyecto/';
   
   constructor(private httpClient: HttpClient) { }
 

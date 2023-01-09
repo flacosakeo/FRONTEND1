@@ -10,7 +10,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  URL =environment.URL+'auth/';
+  URL ='https://backend-1uvh.onrender.com/'+'auth/';
 
   constructor(private httpClient:HttpClient) { }
 

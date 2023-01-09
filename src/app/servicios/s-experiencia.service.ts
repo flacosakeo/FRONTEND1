@@ -9,7 +9,7 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
 
-  URL = environment.URL+'explab/'
+  URL = 'https://backend-1uvh.onrender.com/'+'explab/'
   constructor(private httpClient:HttpClient) { }
 
   public lista():Observable<Experiencia[]>{
